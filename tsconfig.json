@@ -1,7 +1,19 @@
 {
-    "extends": "rollpkg/configs/tsconfig.json",
-    "compilerOptions": {
-        "target": "ES5",
-        "declaration": false
-    }
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "noEmit": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts","src/fscreen.js"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
